@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoops*</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/hangten.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    
+</head>
+    
+    
+    
+    
+<body style=background:aqua >
+    
+    
+
+<div id="mommacontainer"
+       style="background:url(assets/images/wave1.png)">
+    
+    
+    <div id="header">
+        <img src="assets/images/headerimg.png"  width="250"> 
+    </div>
+    
+    <div>
+        <button id="daclick" >Click this</button>
+        
+    </div>
+    <div id=neededword>
+        <h1 id=slatetext><span id="blankletset"></span></h1>
+    
+        
+    </div>
+    
+   
+
+    
+    
+    
+    
+</div>        
+
+
+    
+<script type="text/javascript">
+    
+    
+$(document).ready(function(){
+    
+function intiaiteGame (){    
+var undercurrent = 0;
+var words = [];
+var word = "";
+var answerArray = [];
+var guess = "";
+var remainingLetters = 0;
+
+}
+    
+    
+
+ 
+        
+        
+        
+    
+
+
+$('#daclick').click(function(){
+  
+    undercurrent++;
+    console.log(undercurrent); 
+        
+        if (undercurrent == 7){
+            undercurrent = 0
+        };
+   
+if (undercurrent == 0)
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave1.png)'});
+    };
+if (undercurrent == 1)
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave1ish.png)'});
+    };
+if (undercurrent == 2)
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave2.png)'});
+    };
+if (undercurrent == 3)
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave3.png)'});
+    };
+if (undercurrent == 4)
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave4.png)'});
+    };
+if (undercurrent == 5 )
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave5.png)'});
+    };
+if (undercurrent == 6)
+    {
+    $('#mommacontainer').css({'background':'url(assets/images/wave6.png)'});
+    };
+    
+    
+});
+/*============================================================================*/   /*============================================================================ */
+  
+
+    
+    
+var undercurrent = 0;
+var words = [
+        "javascript",
+        "amonkey",
+        "amazing",
+        "pancake"
+    ];
+    
+ alert("yooo dude, be careful!! Some knarly rocks out there!");    
+    
+ var word = words[Math.floor(Math.random() * words.length)];
+ var answerArray = [];
+ for (var i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+    }
+
+   
+ var remainingLetters = word.length
+ 
+/*============================================================================*/
+/* setting 'blankslate' */
+    
+    
+    var blankslate =  answerArray.join(" ");
+    document.getElementById("blankletset").innerHTML = blankslate; 
+    
+    $(document).keypress(function(event){  
+        var guess = String.fromCharCode(event.which);
+            console.log(guess);
+     
+     /* for (var j = 0; j < word.length; j++)  
+        if (word[j] === guess)  {
+            answerArray[j] = guess;
+            remainingLetters--;}
+    
+        });
+
+    });
+    */
+});
+});
+    
+
+/*============================================================================*/            
+      
+        
+        
+    
+        
+
+           
+ // Game code goes here
+ // Show the player their progress
+ // Take input from the player
+ // Update answerArray and remainingLetters for every correct guess
+
+
+/*============================================================================*/
+/* --- [Function: Changing BG Image, via "undercurrent"] --- */
+    
+
+/*============================================================================*/
+
+/*============================================================================*/
+/* */  
+    
+/*function checkPhoneKey(key) {
+  return (key >= '0' && key <= '9') || key == '+' || key == '(' || key == ')' || key == '-' ||
+    key == 'ArrowLeft' || key == 'ArrowRight' || key == 'Delete' || key == 'Backspace';
+}*/
+
+
+  
+    
+    
+</script>
+</body>
+</html>
+    
