@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    
+    
+    
+    
+    <div>
+    
+    <p> "print" + print </p>
+    
+    </div>
+    
+    <input> 
+    
+    <script> 
+    
+    var print = "";
+        
+    var title = "blade runner";
+    var queryURL = "http://www.omdbapi.com/?t=" + title + "&apikey=trilogy";
+    
+    $.ajax({
+        url:queryURL,
+        method: "GET"
+        
+    }).then(function(response){
+     
+        var print = response; 
+    });
+    
+        
+        
+    </script>      
+</body>
+
+
+
+
+</html>
