@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Triva Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+
+<body>
+<style>
+    .question{
+    font-weight: 800;
+}
+</style>
+
+<div>
+    <h1 class="text-center"> How Well's Your English? </h1>
+    
+</div>
+    
+    <div class="text-center">
+    <div>Timer:</div>
+<div id="show-number"></div>
+</div>
+  <br>
+
+<div id="quiz" class="jumbotron text-center"></div>
+<div id="results" class="card text-center"></div>
+<button id="submit">Get Results</button>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+   var daQuestions = [
+    {
+        question: "1: A harsh discordant mixture of sounds?",
+        answers: {
+            a: 'Nirvana',
+            b: 'Cacophony',
+            c: 'Rod Stewart'
+        },
+        correctAnswer: 'b'
+    },
+         {
+        question: "2: Clear, logical, and convincing?",
+        answers: {
+            a: 'Myoptic',
+            b: 'Donald Trump',
+            c: 'Cogent'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "3: Well meaning and kindly?",
+        answers: {
+            a: 'Autonomy',
+            b: 'Grandmothers',
+            c: 'Benevolent'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "4: Bubbles in a liquid, or enthusiasm?",
+        answers: {
+            a: 'My Brain',
+            b: 'Effervesence',
+            c: 'Leonardo Dicaprio'
+        },
+        correctAnswer: 'b'
+    } ,
+    {
+        question: "5: Difficult to catch or pin down?",
+        answers: {
+            a: 'Elusive',
+            b: 'A Prius',
+            c: 'untied shoes'
+        },
+        correctAnswer: 'a'
+    },
+        {
+        question: "6: Lasting for only a short time?",
+        answers: {
+            a: 'Late-night infomercials ',
+            b: 'Ephemeral ',
+            c: 'Madonna '
+        },
+        correctAnswer: 'b'
+    },
+         {
+        question: "7: Particularly sociable?",
+        answers: {
+            a: 'Frivolous ',
+            b: 'A Tortuise ',
+            c: 'Gregarious '
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "8: A passionate expression of sorrow?",
+        answers: {
+            a: 'A happy birthday card',
+            b: 'Tony the Tiger',
+            c: 'Lament'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "9: Famous or well-known, typically for a bad reason?",
+        answers: {
+            a: 'Notorious',
+            b: 'The Pope',
+            c: 'Jon Clark'
+        },
+        correctAnswer: 'a'
+    } ,
+    {
+        question: "10: Attractive and impressive through being especially colorful or sumptuous?",
+        answers: {
+            a: 'Resplendent',
+            b: 'The sun',
+            c: 'Socks'
+        },
+        correctAnswer: 'a'
+    }
+];
+    
+     var number = 30;
+
+  var intervalId;
+  function run() {
+    intervalId = setInterval(decrement, 1000);
+  }
+
+  function decrement() {
+
+    number--;
+
+    $("#show-number").html("<h2>" + number + "</h2>");
+
+    if (number === 0) {
+
+      stop();
+
+      alert("Time Up!  -----   When I put the 'showresults' function after this; all the questions evaporate??");
+        
+   //   function showResults(questions, quizContainer, resultsContainer)
+    
+    }
+  }
+run();
+
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(daQuestions, quizContainer, resultsContainer, submitButton);
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+    function showQuestions(questions, quizContainer){
+    
+        var output = [];
+        var answers;
+
+        for(var i=0; i<questions.length; i++){
+            
+            answers = [];
+
+            for(letter in questions[i].answers){
+                
+                answers.push(
+                    '<label>'
+                        + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+                        + letter + ': '
+                        + questions[i].answers[letter]
+                    + '</label>'
+                );
+            }
+
+           
+            output.push(
+                '<div class="question">' + questions[i].question + '</div>'
+                + '<div class="answers">' + answers.join('') + '</div>'
+            );
+        }
+
+      
+        quizContainer.innerHTML = output.join('');
+    }
+
+
+    function showResults(questions, quizContainer, resultsContainer){
+        
+    
+        var answerContainers = quizContainer.querySelectorAll('.answers');
+        
+        var userAnswer = '';
+        var numCorrect = 0;
+        
+    
+        for(var i=0; i<questions.length; i++){
+
+            
+            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+            
+            
+            if(userAnswer===questions[i].correctAnswer){
+            
+                numCorrect++;
+            
+                answerContainers[i].style.color = 'lightgreen';
+            }
+
+            else{
+                answerContainers[i].style.color = 'red';
+            }
+        }
+
+
+        resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    }
+
+    showQuestions(questions, quizContainer);
+
+    
+    submitButton.onclick = function(){
+        showResults(questions, quizContainer, resultsContainer);
+    }
+
+}
+</script>
+</body>
+</html>
