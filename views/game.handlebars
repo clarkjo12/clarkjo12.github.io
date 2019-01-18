@@ -1,0 +1,100 @@
+<div class="main">
+  <div class="title">Battle Arena</div>
+
+  <div class="momma-koh-prof">
+    
+    <div class="user-que">
+       <div class="table">
+          <div id="messageArea"class="row">
+                  <h3 class="user-title">Next up:</h3>
+              <ul class="list-group" id="users13"></ul>
+                
+          </div>
+        </div>
+      </div>
+
+    <div class="koh-prof">
+      <div class="prof-pic user1">
+        <img id="prof-pic1" src="https://pbs.twimg.com/profile_images/552145045663408129/egywNuyx_400x400.png" alt="profile pic" height="75" width="75">
+      </div>
+      <div class="prof-details">
+        <div class="prof-top">
+          <div class="prof-title">X - King of the Hill</div>
+          <div class="prof-level user1"></div>
+        </div>
+        <div class="prof-user user1" id="player1"></div>
+        <div class="prof-streak user1" id="wins1">Wins: </div>
+      </div>
+    </div>
+  </div>
+  <div class=sunbelt>
+    <div class="chal-poke">
+      <div class="oval" id="chal-turn"></div>
+    </div>
+    <div class="game-board">
+      <div class="container-fluid">
+        <div class="row" id="mainboard">
+          <div class="col-12 col-sm-6 content">
+            <div class="container-fluid tic-container">
+              <div class="row tic-row">
+                <div class="col-4 tic-box" id="00"> </button></div>
+                <div class="col-4 tic-box" id="01"> </button></div>
+                <div class="col-4 tic-box" id="02"> </button></div>
+              </div>
+              <div class="row tic-row">
+                <div class="col-4 tic-box" id="10"> </button></div>
+                <div class="col-4 tic-box" id="11"> </button></div>
+                <div class="col-4 tic-box" id="12"> </button></div>
+              </div>
+              <div class="row tic-row">
+                <div class="col-4 tic-box" id="20"> </button></div>
+                <div class="col-4 tic-box" id="21"> </button></div>
+                <div class="col-4 tic-box" id="22"> </button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="koh-poke">
+      <div class="oval" id="koh-turn"></div>
+    </div>
+  </div>
+
+  <div class="momma-chal-prof">
+    <div class="chal-prof">
+      <div class="prof-pic user2">
+        <img id="prof-pic2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1pOZXhrPbTqBlUUaqpxCpX7LgZG1zgcLrcTIlyGDBTEONA7vD6Q" alt="profile pic" height="75" width="75">
+      </div>
+      <div class="prof-details">
+        <div class="prof-top">
+          <div class="prof-title">Challenger - O</div>
+          <div class="prof-level user2"></div>
+        </div>
+        <div class="prof-user user2" id="player2"></div>
+        <div class="prof-streak user2" id="wins2">Wins: </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/game.js"></script>
