@@ -3099,7 +3099,7 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/bg.jpg);
+			background-image: url(../../images/dogs2.JPG);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3365,7 +3365,7 @@
 				background-color: rgba(0, 0, 0, 0.95);
 				height: 100%;
 				left: 0;
-				opacity: 0.75;
+				opacity: 0.60;
 				position: absolute;
 				top: 0;
 				width: 100%;
