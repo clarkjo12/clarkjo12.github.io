@@ -1657,6 +1657,7 @@
 	}
 
 	p {
+		text-align: center;
 		margin: 0 0 2rem 0;
 	}
 
@@ -3316,6 +3317,8 @@
 			.wrapper.style3 table thead {
 				border-bottom-color: rgba(255, 255, 255, 0.25);
 			}
+
+
 
 			.wrapper.style3 table tfoot {
 				border-top-color: rgba(255, 255, 255, 0.25);
