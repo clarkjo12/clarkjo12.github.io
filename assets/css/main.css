@@ -3107,6 +3107,16 @@
 			position: relative;
 		}
 
+		.wrapper.style3.past{
+			background-image: url(../../images/mountain.jpeg);
+
+		}
+
+		.wrapper.style3.future{
+			background-image: url(../../images/rocket.jpeg);
+			
+		}
+
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
 				color: #ffffff;
 			}
@@ -3368,7 +3378,7 @@
 				background-color: rgba(0, 0, 0, 0.95);
 				height: 100%;
 				left: 0;
-				opacity: 0.60;
+				opacity: 0.350;
 				position: absolute;
 				top: 0;
 				width: 100%;
