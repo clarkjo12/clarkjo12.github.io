@@ -19,6 +19,7 @@
 		vertical-align: baseline;
 	}
 
+	
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -1660,6 +1661,7 @@
 		text-align: center;
 		margin: 0 0 2rem 0;
 	}
+	
 
 		p.special {
 			text-transform: uppercase;
@@ -1682,6 +1684,7 @@
 				background-color: rgba(0, 0, 0, 0.125);
 			}
 
+
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		line-height: 1.5;
@@ -1696,6 +1699,8 @@
 	h2 {
 		font-size: 1.75rem;
 	}
+
+
 
 	h3 {
 		font-size: 1.35rem;
@@ -1846,6 +1851,7 @@
 				height: 1px;
 				background-color: rgba(0, 0, 0, 0.125);
 			}
+
 
 		.box .content {
 			padding: 3rem;
